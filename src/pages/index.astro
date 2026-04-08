@@ -1,0 +1,47 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import Curriculum from './curriculum.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+<main class="min-h-screen flex items-center justify-center bg-linear-to-br from-slate-50 to-slate-100 p-6">
+    
+    <div class="text-center space-y-8 max-w-2xl">
+      
+      <div class="flex justify-center">
+        <div class="w-16 h-16 bg-blue-600 rounded-2xl rotate-12 flex items-center justify-center shadow-lg shadow-blue-200">
+          <span class="text-white text-3xl font-bold -rotate-12">L</span>
+        </div>
+      </div>
+
+      <header class="space-y-4">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight">
+          Hola, soy <span class="text-blue-600">Lautaro Saint Martin</span>
+        </h1>
+        <p class="text-xl text-slate-600 font-medium">
+          Estudiante de programación enfocado en crear soluciones web modernas.
+        </p>
+      </header>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/curriculum" class="w-full sm:w-auto">
+          <button class="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-200 hover:-translate-y-1 active:scale-95 text-lg">
+            Ver mi Curriculum
+          </button>
+        </a>
+        
+        <a href="https://github.com/lautarosaintmartin2-crypto" target="_blank" class="w-full sm:w-auto">
+          <button class="w-full px-8 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all text-lg">
+            Mi GitHub
+          </button>
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+</Layout>
