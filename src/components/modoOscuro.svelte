@@ -1,15 +1,22 @@
 <script>
     let oscuro = $state(false)
 
+    if(typeof window !== 'undefined' && localStorage.getItem('oscuro') === 'true'){
+        oscuro = true
+        document.documentElement.classList.add('dark-mode')
+    }
+
     function modoOscuro(){
         oscuro = !oscuro
-        document.documentElement.classList.toggle('dark')
+       
+        document.documentElement.classList.toggle('dark-mode')
+        localStorage.setItem('oscuro', oscuro)
     }
 </script>
 
 <button 
     onclick={modoOscuro}
-    class= "fixed bottom-6 right-6">
+    class= "fixed bottom-6 right-6 bg-white border border-slate-200 px-4 py-2 rounded-full shadow.lg">
 
-    {oscuro ? '☀️ Modo claro' : '🌙 Modo oscuro'}
+    {oscuro ? 'Modo claro' : 'Modo oscuro'}
 </button>

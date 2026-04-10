@@ -1,5 +1,6 @@
 ---
     import Layout from "../layouts/Layout.astro"
+    import ModoOscuro from "../components/modoOscuro.svelte"
 ---
 
 <Layout>
@@ -103,4 +104,16 @@
 
       </div> </main>
   </div>
+
+   <style>
+    :global(.dark-mode) {
+      filter: invert(1) hue-rotate(180deg);
+  }
+    :global(.dark-mode img) {
+      filter: invert(1) hue-rotate(180deg);
+  }
+</style>
+    
+  <ModoOscuro client:load />
+
 </Layout>

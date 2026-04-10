@@ -48,5 +48,15 @@ import Curriculum from './experiencia.astro';
 
   </main>
   
+  <style>
+    :global(.dark-mode) {
+      filter: invert(1) hue-rotate(180deg);
+  }
+    :global(.dark-mode img) {
+      filter: invert(1) hue-rotate(180deg);
+  }
+</style>
+    
   <ModoOscuro client:load />
+
 </Layout>
