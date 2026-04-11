@@ -18,5 +18,5 @@
     onclick={modoOscuro}
     class= {oscuro ? "fixed bottom-6 right-6 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-lg text-black" : "fixed bottom-6 right-6 bg-black border border-slate-200 px-4 py-2 rounded-full shadow-lg text-white"}>
     
-    {oscuro ? '☀︎ Modo claro' : '☾ Modo oscuro'}
+    {oscuro ? '☀︎' : '☾'}
 </button>
