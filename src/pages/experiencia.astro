@@ -1,128 +1,73 @@
 ---
-    import Layout from "../layouts/Layout.astro"
-    import ModoOscuro from "../components/modoOscuro.svelte"
+import Layout from "../layouts/Layout.astro";
+import ModoOscuro from "../components/modoOscuro.svelte";
+import Habilidades from "../components/Habilidades/habilidades.astro";
+import Proyecto from "../components/Proyecto/proyectos.astro";
+import InteresEidioma from "../components/InteresesEidioma/interesesEidioma.astro";
 ---
 
 <Layout>
-<div class="min-h-screen flex items-center justify-center bg-slate-50 p-6">
-    <main class="w-full max-w-2xl bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-      
+  <div class="min-h-screen flex items-center justify-center bg-slate-50 p-6">
+    <main
+      class="w-full max-w-2xl bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden"
+    >
       <header class="bg-blue-600 p-8 text-white">
-        <h1 class="text-3xl font-bold tracking-tight">Lautaro Saint Martin</h1> <!--font-bold para que el texto aparezca mas grueso y oscuro, tracking-tight sirve para reducir los especios entre caracteres haciendo que se vea mas compacto --> 
-        <p class="text-blue-100 mt-1 font-medium">Estudiante de 2do año de Programación</p>
+        <h1 class="text-3xl font-bold tracking-tight">Lautaro Saint Martin</h1>
+        <!--font-bold para que el texto aparezca mas grueso y oscuro, tracking-tight sirve para reducir los especios entre caracteres haciendo que se vea mas compacto -->
+        <p class="text-blue-100 mt-1 font-medium">
+          Estudiante de 2do año de Programación
+        </p>
         <div class="flex gap-4 mt-4 text-sm text-blue-50">
           <span>📍 Argentina</span>
-          <span>📞 +54 3491 544560</span> 
+          <span>📞 +54 3491 544560</span>
         </div>
       </header>
 
       <div class="p-8">
-        <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">Mis Habilidades</h2>
-        
-        <div class="space-y-6 mb-10">
-          <div class="grid grid-cols-3 gap-4 items-start">
-            <span class="text-slate-900 font-semibold text-sm">Lenguajes</span>
-            <div class="col-span-2 flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm">Java</span>
-              <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm">MD</span>
-              <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm">C</span>
-              <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm">TypeScript</span>
-            </div>
-          </div>
+        <Habilidades />
 
-          <div class="grid grid-cols-3 gap-4 items-start border-t border-slate-50 pt-4">
-            <span class="text-slate-900 font-semibold text-sm">Frontend</span> <!--font-semibold para marcar en negrita pero mas pequeño-->
-            <div class="col-span-2 flex flex-wrap gap-2"> <!--col-span  sirve para fusionar celdas horizontalmente-->
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md text-sm border border-blue-100">HTML</span> <!--py-1 (padding) se usa para controlar el espacio vertical de un elemento -->
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md text-sm border border-blue-100">Tailwind CSS</span>
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md text-sm border border-blue-100">Astro</span>
-            </div>
-          </div>
+        <Proyecto />
 
-          <div class="grid grid-cols-3 gap-4 items-start border-t border-slate-50 pt-4"> <!--  -->
-            <span class="text-slate-900 font-semibold text-sm">Herramientas</span>
-            <div class="col-span-2 my-2 text-slate-600 text-sm flex gap-2 flex-wrap">
-              <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm">Git</span> <!--rounded md para sirve para redondear bordes medianos a los elementos -->
-              <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm">GitHub</span>
-              <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm">VS Code</span>
-              <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm">PostgreSQL</span>
-            </div>
-          </div>
-        </div>
+        <InteresEidioma />
 
-        <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6 border-t pt-8">Proyectos Destacados</h2> <!--tracking-widest sirve para aumentar el espacio entre las letras -->
-
-        <div class="p-6 bg-slate-50 rounded-xl border-l-4 border-blue-600 shadow-sm mb-10">
-          <div class="flex justify-between items-center mb-2"> <!--flex justify-between sirve para distribuir el espacio disponible de manera uniforme entre los elementos -->
-            <h3 class="text-lg font-bold text-slate-800">Sistema de Kiosco en C</h3>
-            <span class="text-xs font-mono bg-blue-100 text-blue-700 px-2 py-1 rounded">Persistencia en Archivos</span> <!-- font mono para cambiar la fuente del elemento -->
-          </div>
-          <p class="text-sm text-slate-600 mb-4">
-            Solución integral para gestión comercial con almacenamiento en <strong>archivos binarios</strong>, asegurando la persistencia de stock y ventas.
-          </p>
-          <div class="flex gap-2 items-center text-[10px] font-bold text-slate-500 italic">
-            <span class="uppercase text-slate-400 not-italic">Utilizado:</span> Manejo de Memoria, Punteros, CRUD. <!-- not italic, es una fuente que pone el elemento en cursiva o no, not-italic no lo pone en cursiva, italic si  -->
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-slate-100 pt-8">
-          <section>
-            <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Intereses</h2> <!-- mg para controlar el espacio en blanco debajo de un elemento -->
-              <ul class="text-sm text-slate-600 space-y-2">
-                <li class="flex items-center gap-2">
-                  <span class="text-blue-500">•</span> Backend & APIs
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-blue-500">•</span> Optimización de DB
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-blue-500">•</span> Hardware & Performance
-                </li>
-              </ul>
-          </section>
-
-          <section>
-            <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Idiomas</h2>
-            <div class="space-y-3">
-              <div class="flex justify-between items-center">
-                <span class="text-sm font-medium text-slate-700">Español</span>
-                <span class="text-xs text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded">Nativo</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-sm font-medium text-slate-700">Inglés</span>
-                <span class="text-xs text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded">Técnico / B1</span>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <footer class="mt-10 pt-8 border-t border-slate-100 flex justify-center">
-          <a href="/" class="group flex items-center gap-2 text-slate-500 hover:text-blue-600 transition-colors font-medium">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        <footer
+          class="mt-10 pt-8 border-t border-slate-100 flex justify-center"
+        >
+          <a
+            href="/"
+            class="group flex items-center gap-2 text-slate-500 hover:text-blue-600 transition-colors font-medium"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 group-hover:-translate-x-1 transition-transform"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
             </svg>
             Volver al inicio
           </a>
         </footer>
-
-      </div> 
-
+      </div>
     </main>
-
   </div>
 
-   <style>
+  <style>
     :global(.dark-mode) {
       filter: invert(1) hue-rotate(180deg);
-  }
+    }
     :global(.dark-mode img) {
       filter: invert(1) hue-rotate(180deg);
-  }
-    :global(.dark-mode button){
-      filter: invert(1) hue-rotate(180deg)
     }
-</style>
-    
-  <ModoOscuro client:load />
+    :global(.dark-mode button) {
+      filter: invert(1) hue-rotate(180deg);
+    }
+  </style>
 
+  <ModoOscuro client:load />
 </Layout>
