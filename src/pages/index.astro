@@ -7,6 +7,12 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+  <header
+    class="flex shadow-md py-4 px-4 sm:px-10 bg-white relative z-50" 
+  > <!-- z-50 para que el header que por encima de otros elementos de la pagina -->
+    <ModoOscuro client:load />
+  </header>
+
   <main
     class="min-h-screen flex items-center justify-center bg-linear-to-br from-slate-50 to-slate-100 p-6"
   >
@@ -76,6 +82,4 @@ import Layout from "../layouts/Layout.astro";
       filter: invert(1) hue-rotate(180deg); /*hue rotate para rotar el tono de un color */
     }
   </style>
-
-  <ModoOscuro client:load />
 </Layout>
