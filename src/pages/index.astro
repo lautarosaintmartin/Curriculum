@@ -8,15 +8,16 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <header
-    class="flex shadow-md py-4 px-4 sm:px-10 bg-white relative z-50" 
-  > <!-- z-50 para que el header que por encima de otros elementos de la pagina -->
+    class="flex shadow-md py-4 px-4 sm:px-10 bg-white relative z-50 dark:bg-slate-900 transition-colors duration-300"
+  >
+    <!-- z-50 para que el header que por encima de otros elementos de la pagina -->
     <ModoOscuro client:load />
   </header>
 
   <main
-    class="min-h-screen flex items-center justify-center bg-linear-to-br from-slate-50 to-slate-100 p-6"
+    class="min-h-screen flex items-center justify-center bg-linear-to-br from-slate-50 to-slate-100 p-6 dark:bg-slate-900 dark:bg-none transition-colors duration-300"
   >
-    <div class="text-center space-y-8 max-w-2xl">
+    <div class="text-center space-y-8 max-w-2xltransition-colors duration-300">
       <div class="flex justify-center">
         <!-- flex para controlar como los articulos flexibles crecen y se encongen-->
         <img
@@ -28,7 +29,7 @@ import Layout from "../layouts/Layout.astro";
 
       <header class="space-y-4">
         <h1
-          class="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight"
+          class="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight dark:text-white transition-colors duration-300"
         >
           <!-- cambia la fuente a extra negrita -->
           Hola, soy
@@ -38,7 +39,7 @@ import Layout from "../layouts/Layout.astro";
         >
           <span class="text-blue-600">Lautaro Saint Martin</span>
         </h1>
-        <p class="text-xl text-slate-600 font-medium">
+        <p class="text-xl text-slate-600 font-medium dark:text-white">
           Estudiante de programación enfocado en crear soluciones web modernas.
         </p>
       </header>
@@ -60,7 +61,7 @@ import Layout from "../layouts/Layout.astro";
         >
           <!-- sirve para aplicar estilos a un elemento que es el objetivo actual de la navegación, w-full para establecer el ancho al 100% como su contenedor padre, sm:w-auto sirve para establecer el ancho automatico de un elemento solo en pantallas de tamaño mediano -->
           <button
-            class="w-full px-8 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all hover:-translate-y-1 active:scale-95 text-lg"
+            class="w-full px-8 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all hover:-translate-y-1 active:scale-95 text-lg dark:bg-slate-800 dark:border-slate-800 dark:text-white dark:hover:bg-slate-900 transition-colors duration-300"
           >
             <!-- transition all, se utiliza para animar cambios en todas las propiedades CSS, el hover sirve para aplcar estilos a un elemento cuando el cursos se posiciona sobre el, active:scale para aplicar efectos de escala a un elemento cuando esta en estadoo activo-->
             Mi GitHub
@@ -69,17 +70,4 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </main>
-
-  <style>
-    :global(.dark-mode) {
-      /* :global es un selector para que una clase o identificador no sea modificado por el compilador */
-      filter: invert(1) hue-rotate(180deg);
-    }
-    :global(.dark-mode img) {
-      filter: invert(1) hue-rotate(180deg);
-    }
-    :global(.dark-mode button) {
-      filter: invert(1) hue-rotate(180deg); /*hue rotate para rotar el tono de un color */
-    }
-  </style>
 </Layout>

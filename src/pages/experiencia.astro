@@ -8,16 +8,16 @@ import InteresEidioma from "../components/InteresesEidioma/interesesEidioma.astr
 
 <Layout>
   <header
-    class="flex shadow-md py-4 px-4 sm:px-10 bg-white min-h-[17.5] tracking-wide relative z-50"
+    class="flex shadow-md py-4 px-4 sm:px-10 bg-white min-h-[17.5] tracking-wide relative z-50 dark:bg-slate-900 transition-colors duration-300"
   >
     <ModoOscuro client:load />
   </header>
 
-  <div class="min-h-screen flex items-center justify-center bg-slate-50 p-6">
+  <div class="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900 transition-colors duration-300 p-6">
     <main
-      class="w-full max-w-2xl bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden"
+      class="w-full max-w-2xl bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden dark:border-slate-800 transition-colors duration-300"
     >
-      <header class="bg-blue-600 p-8 text-white">
+      <header class="bg-blue-600 dark:bg-blue-700 p-8 text-white">
         <h1 class="text-3xl font-bold tracking-tight">Lautaro Saint Martin</h1>
         <!--font-bold para que el texto aparezca mas grueso y oscuro, tracking-tight sirve para reducir los especios entre caracteres haciendo que se vea mas compacto -->
         <p class="text-blue-100 mt-1 font-medium">
@@ -29,7 +29,7 @@ import InteresEidioma from "../components/InteresesEidioma/interesesEidioma.astr
         </div>
       </header>
 
-      <div class="p-8">
+      <div class="p-8 dark:bg-slate-900">
         <Habilidades />
 
         <Proyecto />
@@ -63,15 +63,4 @@ import InteresEidioma from "../components/InteresesEidioma/interesesEidioma.astr
     </main>
   </div>
 
-  <style>
-    :global(.dark-mode) {
-      filter: invert(1) hue-rotate(180deg);
-    }
-    :global(.dark-mode img) {
-      filter: invert(1) hue-rotate(180deg);
-    }
-    :global(.dark-mode button) {
-      filter: invert(1) hue-rotate(180deg);
-    }
-  </style>
 </Layout>
