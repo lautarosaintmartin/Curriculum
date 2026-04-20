@@ -1,12 +1,16 @@
 <script>
     let oscuro = $state(false);
 
+    //typeof window !== undefined es para verificar que el codigo se este ejecutando en el navegador
+
     if (
         typeof window !== "undefined" &&
         localStorage.getItem("oscuro") === "true"
+        //localStorage.getItem("oscuro") === "true" con esto verifico si el modo oscuro se uso anteriormente
     ) {
         oscuro = true;
         document.documentElement.classList.add("dark");
+        //Agrega la clase dark al elemento html
     }
 
     function modoOscuro() {
